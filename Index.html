@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+
+
+</head>
+<style>
+    button.delete-heading {
+        margin-left: 10px;
+        padding: 2px 5px;
+        background-color: white;
+        border: 2px solid black;
+    }
+
+    button.delete-subheading {
+        margin-left: 10px;
+        padding: 0px 1px;
+        background-color: white;
+        border: 2px solid black;
+
+    }
+
+    hr {
+        margin-top: 10px;
+        border: 1px solid black;
+    }
+
+    .formInput {
+        margin-left: 3%;
+
+    }
+
+
+    h2 {
+        margin-left: 1%;
+    }
+
+    h4 {
+        margin-left: 3%;
+    }
+
+    .top-header {
+        margin-top: 1%;
+        margin-left: 3%;
+        margin-right: 3%;
+        justify-content: space-between;
+        display: flex;
+    }
+</style>
+
+<body>
+    <header class="top-header">
+        <div class="head">
+            <!--Heading button-->
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                Heading
+            </button>
+
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Heading</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <input type="text" id="headInput" class="form-control" placeholder="Enter your Heading"
+                                required>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="close-btn" data-dismiss="modal">Close</button>
+                            <button type="button" id="saveButton" class="save-btn">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Sub-Heading button-->
+        <div class="subhead">
+            <!--Heading button-->
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal-1">
+                Sub-Heading
+            </button>
+
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal-1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Sub-Heading</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <select type="text" class="form-control" placeholder="Select your Heading" id="myDropdown">
+                                <option>Select Your Heading</option>
+
+                            </select>
+                        </div>
+                        <div class="modal-body">
+                            <input type="text" id="subheadInput1" class="form-control"
+                                placeholder="Enter your Sub-Heading">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="close-btn" data-dismiss="modal">Close</button>
+                            <button type="button" id="subhsaveButton" class="save-btn">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--form button-->
+        <div class="form">
+            <!--Heading button-->
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal-2">
+                Form
+            </button>
+
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal-2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel"> <b>Form Modal</b></h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+
+                        <div class="modal-body">
+                            <label for="text">Select Heading</label>
+                            <select type="text" class="form-control" placeholder="Select your Heading" id="selectDown">
+                                <option>Select Your Heading</option>
+                            </select>
+                            <label for="text">Select Sub-Heading</label>
+                            <select type="text" class="form-control" placeholder="Select an input type"
+                                id="selectDown1">
+
+                            </select>
+                            <label for="text">Choose Input Type</label>
+                            <select type="text" class="form-control" placeholder="Select your input" id="selectDown2">
+                                <option>Select an input type</option>
+                                <option value="select">Select</option>
+                                <option value="textarea">Textarea</option>
+                                <option value="button">Button</option>
+                                <option value="checkbox">Checkbox</option>
+                                <option value="color">Color</option>
+                                <option value="date">Date</option>
+                                <option value="email">Email</option>
+                                <option value="file">File</option>
+                                <option value="hidden">Hidden</option>
+                                <option value="image">Image</option>
+                                <option value="month">Month</option>
+                                <option value="number">Number</option>
+                                <option value="password">Password</option>
+                                <option value="radio">Radio</option>
+                                <option value="range">Range</option>
+                                <option value="reset">Reset</option>
+                                <option value="search">Search</option>
+                                <option value="submit">Submit</option>
+                                <option value="tel">Tel</option>
+                                <option value="text">Text</option>
+                                <option value="time">Time</option>
+                                <option value="week">Week</option>
+
+                            </select>
+                            <label for="text">Name:</label>
+                            <input type="text" id="nameInput" class="form-control" placeholder="">
+                            <label for="text">Label:</label>
+                            <input type="text" id="lableInput" class="form-control" placeholder="">
+                            <label for="text">Class:</label>
+                            <input type="text" id="classInput" class="form-control" placeholder="">
+                            <label for="text">placeholder:</label>
+                            <input type="text" id="placeholderInput" class="form-control" placeholder="">
+                            <label for="text">Value:</label>
+                            <input type="text" id="valueInput" class="form-control" placeholder="">
+                            <label for="text">Option:</label>
+                            <input type="text" id="optionInput" class="form-control" placeholder="">
+                            <!-- checkbox -->
+                            <label for="readonly"> Readonly:</label>
+                            <input type="checkbox" id="readonlyBox" name="readonlyBox" value="Readonly"> <br>
+                            <label for="disabled"> Disabled:</label>
+                            <input type="checkbox" id="disabledBox" name="disabledBox" value="Disabled"> <br>
+                            <label for="required"> Required:</label>
+                            <input type="checkbox" id="requiredBox" name="requiredBox" value="Required"><br>
+
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="close-btn" data-dismiss="modal">Close</button>
+                            <button type="button" id="formsaveButton" class="save-btn">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <hr>
+    <div id="resultDiv">
+
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
