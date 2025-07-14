@@ -201,16 +201,19 @@ $(document).ready(function () {
 
         } else if (inputType === "checkbox" || inputType === "radio") {
             formHTML = `
-            ${optionIn.split(',').map(opt => `
-            <label>
-            ${opt.trim()}
-                <input type="${inputType}" 
-                       name="${nameIn}" 
-                       class="${classIn}"
-                       ${readIn} ${disIn} ${reqIn}>
-               
-            </label>
-        `).join('')}`;
+    <label>${lableIn}</label> <br>
+    ${optionIn.split(',').map((opt, i) => {
+                const id = `${nameIn}_${i}`;
+                return `
+        <div class="${classIn}">
+            <input type="${inputType}" 
+                   id="${id}"
+                   name="${nameIn}" 
+                   ${readIn} ${disIn} ${reqIn}>
+            <label for="${id}">${opt.trim()}</label>
+        </div>`;
+            }).join('')}`;
+
 
         } else if (inputType === "file" || inputType === "image") {
             formHTML = `
@@ -251,7 +254,7 @@ $(document).ready(function () {
         $("#selectDown,#selectDown1,#selectDown2,#nameInput, #lableInput, #classInput, #placeholderInput, #valueInput, #optionInput").val('');
         $("#readonlyBox, #disabledBox, #requiredBox").prop("checked", false);
     });
-// for heading Drag and Drop
+    // for heading Drag and Drop
     $("#resultDiv").sortable({
         items: '.heading-block',
         handle: 'h2',
